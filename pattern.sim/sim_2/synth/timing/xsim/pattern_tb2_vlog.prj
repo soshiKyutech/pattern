@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../pattern.gen/sources_1/ip/pckgen" --include "../../../../../pattern.srcs/sources_1/new" \
+"pattern_tb2_time_synth.v" \
+"../../../../../pattern.srcs/sources_1/new/pattern.v" \
+"../../../../../pattern.srcs/sources_1/new/syncgen.v" \
+"../../../../../pattern.srcs/sim_2/new/pattern_tb2.v" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,362 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:14 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Thu Jan 12 22:01:00 2023
+# Process ID: 3085879
+# Current directory: /home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1
+# Command line: vivado -log pattern_hdmi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pattern_hdmi.tcl
+# Log file: /home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/pattern_hdmi.vds
+# Journal file: /home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/vivado.jou
+# Running On: Strength, OS: Linux, CPU Frequency: 2199.927 MHz, CPU Physical cores: 32, Host memory: 320897 MB
+#-----------------------------------------------------------
+source pattern_hdmi.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/soshi/workspace/vivado_tutorial/vivado-library-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/utils_1/imports/synth_1/pattern_hdmi.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/utils_1/imports/synth_1/pattern_hdmi.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top pattern_hdmi -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3085998
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2748.621 ; gain = 0.000 ; free physical = 254923 ; free virtual = 285458
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pattern_hdmi' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern_hdmi.v:2]
+INFO: [Synth 8-6157] synthesizing module 'pattern' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern.v:6]
+INFO: [Synth 8-6157] synthesizing module 'syncgen' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pckgen' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen.v:70]
+INFO: [Synth 8-6157] synthesizing module 'pckgen_clk_wiz' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55204]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55204]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:63510]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 61.500000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 43.625000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 7 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:63510]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1093]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (4#1) [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1093]
+INFO: [Synth 8-6157] synthesizing module 'BUFH' [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1319]
+INFO: [Synth 8-6155] done synthesizing module 'BUFH' (5#1) [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:1319]
+INFO: [Synth 8-6155] done synthesizing module 'pckgen_clk_wiz' (6#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'pckgen' (7#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen.v:70]
+WARNING: [Synth 8-7071] port 'clkfb_in' of module 'pckgen' is unconnected for instance 'pckgen' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:13]
+WARNING: [Synth 8-7071] port 'clkfb_out' of module 'pckgen' is unconnected for instance 'pckgen' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:13]
+WARNING: [Synth 8-7071] port 'locked' of module 'pckgen' is unconnected for instance 'pckgen' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:13]
+WARNING: [Synth 8-7023] instance 'pckgen' of module 'pckgen' has 5 connections declared, but only 2 given [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'syncgen' (8#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pattern' (9#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern.v:6]
+INFO: [Synth 8-638] synthesizing module 'rgb2dvi_0' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/synth/rgb2dvi_0.vhd:72]
+WARNING: [Synth 8-3819] Generic 'kClkPrimitive' not present in instantiated entity will be ignored [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern_hdmi.v:27]
+WARNING: [Synth 8-3819] Generic 'kClkRange' not present in instantiated entity will be ignored [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern_hdmi.v:28]
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
+	Parameter kClkPrimitive bound to: MMCM - type: string 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+	Parameter kClkRange bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'rgb2dvi' declared at '/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.vhd:61' bound to instance 'U0' of component 'rgb2dvi' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/synth/rgb2dvi_0.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/xil_defaultlib/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/xil_defaultlib/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (10#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/xil_defaultlib/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (11#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/xil_defaultlib/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'OutputSERDES' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/OutputSERDES.vhd:76]
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'OutputBuffer' to cell 'OBUFDS' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/OutputSERDES.vhd:83]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerMaster' to cell 'OSERDESE2' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/OutputSERDES.vhd:92]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerSlave' to cell 'OSERDESE2' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/OutputSERDES.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (12#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/OutputSERDES.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Encoder' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (13#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (14#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi_0' (15#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/synth/rgb2dvi_0.vhd:72]
+WARNING: [Synth 8-7071] port 'SerialClk' of module 'rgb2dvi_0' is unconnected for instance 'reg2dvi' [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern_hdmi.v:30]
+WARNING: [Synth 8-7023] instance 'reg2dvi' of module 'rgb2dvi_0' has 11 connections declared, but only 10 given [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern_hdmi.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'pattern_hdmi' (16#1) [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern_hdmi.v:2]
+WARNING: [Synth 8-7129] Port SerialClk in module TMDS_Encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aRst in module TMDS_Encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aRst_n in module rgb2dvi is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2748.621 ; gain = 0.000 ; free physical = 254765 ; free virtual = 285300
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2748.621 ; gain = 0.000 ; free physical = 255627 ; free virtual = 286162
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2748.621 ; gain = 0.000 ; free physical = 255627 ; free virtual = 286162
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2748.621 ; gain = 0.000 ; free physical = 255631 ; free virtual = 286167
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'pattern/syncgen/pckgen/inst/clkout1_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'reg2dvi/U0'
+Finished Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'reg2dvi/U0'
+Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_board.xdc] for cell 'pattern/syncgen/pckgen/inst'
+Finished Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_board.xdc] for cell 'pattern/syncgen/pckgen/inst'
+Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen.xdc] for cell 'pattern/syncgen/pckgen/inst'
+Finished Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen.xdc] for cell 'pattern/syncgen/pckgen/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pattern_hdmi_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pattern_hdmi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/constrs_1/new/pattern.xdc]
+Finished Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/constrs_1/new/pattern.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/constrs_1/new/pattern.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pattern_hdmi_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pattern_hdmi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pattern_hdmi_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pattern_hdmi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'reg2dvi/U0'
+Finished Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'reg2dvi/U0'
+Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_late.xdc] for cell 'pattern/syncgen/pckgen/inst'
+Finished Parsing XDC File [/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_late.xdc] for cell 'pattern/syncgen/pckgen/inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2812.570 ; gain = 0.000 ; free physical = 255599 ; free virtual = 286134
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2812.570 ; gain = 0.000 ; free physical = 255599 ; free virtual = 286134
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255676 ; free virtual = 286211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255676 ; free virtual = 286211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for reg2dvi/U0. (constraint file  /home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/dont_touch.xdc, line 13).
+Applied set_property KEEP_HIERARCHY = SOFT for pattern/syncgen/pckgen/inst. (constraint file  /home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/dont_touch.xdc, line 21).
+Applied set_property KEEP_HIERARCHY = SOFT for reg2dvi. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for pattern/syncgen/pckgen. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255676 ; free virtual = 286211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255664 ; free virtual = 286200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   3 Input    5 Bit       Adders := 9     
+	   4 Input    5 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               10 Bit    Registers := 5     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 7     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   4 Input   10 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 6     
+	   2 Input    5 Bit        Muxes := 9     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port aRst_n in module rgb2dvi is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255650 ; free virtual = 286190
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'reg2dvi/U0/PixelClk' to 'patterni_2/pattern/syncgen/HCNT_reg[0]/C'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255530 ; free virtual = 286069
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255525 ; free virtual = 286065
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |BUFGCE     |     1|
+|3     |BUFH       |     1|
+|4     |CARRY4     |    32|
+|5     |LUT1       |    35|
+|6     |LUT2       |    76|
+|7     |LUT3       |    26|
+|8     |LUT4       |    40|
+|9     |LUT5       |    33|
+|10    |LUT6       |    59|
+|11    |MMCME2_ADV |     1|
+|12    |OSERDESE2  |     8|
+|14    |FDPE       |     2|
+|15    |FDRE       |    64|
+|16    |FDSE       |     9|
+|17    |IBUF       |     2|
+|18    |OBUFDS     |     4|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255526 ; free virtual = 286066
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2812.570 ; gain = 0.000 ; free physical = 255580 ; free virtual = 286120
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2812.570 ; gain = 63.949 ; free physical = 255581 ; free virtual = 286121
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2812.570 ; gain = 0.000 ; free physical = 255575 ; free virtual = 286115
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'pattern/syncgen/pckgen/inst/clkout1_buf' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2812.570 ; gain = 0.000 ; free physical = 255602 ; free virtual = 286142
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+
+Synth Design complete, checksum: dff092a4
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 2812.570 ; gain = 64.172 ; free physical = 255802 ; free virtual = 286342
+INFO: [Common 17-1381] The checkpoint '/home/soshi/workspace/vivado_tutorial/pattern/pattern.runs/synth_1/pattern_hdmi.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pattern_hdmi_utilization_synth.rpt -pb pattern_hdmi_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 22:01:31 2023...

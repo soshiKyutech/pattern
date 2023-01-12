@@ -1,0 +1,21 @@
+Vivado Simulator v2021.2.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot pattern_tb2_behav xil_defaultlib.pattern_tb2 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:14]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=36.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.pckgen_clk_wiz
+Compiling module xil_defaultlib.pckgen
+Compiling module xil_defaultlib.syncgen
+Compiling module xil_defaultlib.pattern
+Compiling module xil_defaultlib.pattern_tb2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pattern_tb2_behav

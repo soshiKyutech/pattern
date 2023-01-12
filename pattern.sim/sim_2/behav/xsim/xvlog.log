@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pckgen_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pckgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pattern
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module syncgen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_2/new/pattern_tb2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pattern_tb2
