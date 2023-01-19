@@ -27,25 +27,13 @@ always begin
     CLK = 1; #(STEP/2);
 end
 
-integer fd;
-
 initial begin
-        RST = 0;
-    fd = $fopen("imagedata.raw","wb");
+                RST = 0;
     #(STEP*600) RST = 1;
     #(STEP*20)  RST = 0;
     #(STEP*CLKNUM);
-    $fclose(fd);
     $stop;
-    end
-
-    always @( posedge PCK) begin
-        if ( VGA_DE) begin
-            $fwrite(fd, "%c", VGA_R);
-            $fwrite(fd, "%c",  VGA_G);
-            $fwrite(fd, "%c",  VGA_B);
-        end
-    end
+end
 
 
 endmodule

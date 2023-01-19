@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="pattern_tb3_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="pattern_tb3" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="68,416,269.081 ps"></ZoomStartTime>
+      <ZoomEndTime time="68,418,801.337 ps"></ZoomEndTime>
+      <Cursor1Time time="68,506,769.081 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="266"></NameColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="logic" fp_name="/pattern_tb3/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pattern_tb3/RST">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pattern_tb3/HDMI_CLK_N">
+      <obj_property name="ElementShortName">HDMI_CLK_N</obj_property>
+      <obj_property name="ObjectShortName">HDMI_CLK_N</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pattern_tb3/HDMI_CLK_P">
+      <obj_property name="ElementShortName">HDMI_CLK_P</obj_property>
+      <obj_property name="ObjectShortName">HDMI_CLK_P</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pattern_tb3/HDMI_N">
+      <obj_property name="ElementShortName">HDMI_N[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HDMI_N[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pattern_tb3/HDMI_P">
+      <obj_property name="ElementShortName">HDMI_P[2:0]</obj_property>
+      <obj_property name="ObjectShortName">HDMI_P[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pattern_tb3/STEP">
+      <obj_property name="ElementShortName">STEP[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STEP[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pattern_tb3/CLKNUM">
+      <obj_property name="ElementShortName">CLKNUM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLKNUM[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/pattern_tb3/pattern_hdmi/pattern/syncgen/VCNT">
+      <obj_property name="ElementShortName">VCNT[9:0]</obj_property>
+      <obj_property name="ObjectShortName">VCNT[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/pattern_tb3/pattern_hdmi/pattern/syncgen/hcntend">
+      <obj_property name="ElementShortName">hcntend</obj_property>
+      <obj_property name="ObjectShortName">hcntend</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.sim/sim_3/impl/timing/xsim/pattern_tb3_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockGen
+INFO: [VRFC 10-311] analyzing module OutputSERDES
+INFO: [VRFC 10-311] analyzing module OutputSERDES_0
+INFO: [VRFC 10-311] analyzing module OutputSERDES_2
+INFO: [VRFC 10-311] analyzing module OutputSERDES_4
+INFO: [VRFC 10-311] analyzing module ResetBridge
+INFO: [VRFC 10-311] analyzing module ResetBridge_5
+INFO: [VRFC 10-311] analyzing module SyncAsync
+INFO: [VRFC 10-311] analyzing module SyncAsync_6
+INFO: [VRFC 10-311] analyzing module SyncAsync__parameterized0
+INFO: [VRFC 10-311] analyzing module TMDS_Encoder
+INFO: [VRFC 10-311] analyzing module TMDS_Encoder_1
+INFO: [VRFC 10-311] analyzing module TMDS_Encoder_3
+INFO: [VRFC 10-311] analyzing module pattern
+INFO: [VRFC 10-311] analyzing module pattern_hdmi
+INFO: [VRFC 10-311] analyzing module pckgen
+INFO: [VRFC 10-311] analyzing module pckgen_clk_wiz
+INFO: [VRFC 10-311] analyzing module rgb2dvi
+INFO: [VRFC 10-311] analyzing module rgb2dvi_0
+INFO: [VRFC 10-311] analyzing module syncgen
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_3/new/pattern_tb3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pattern_tb3

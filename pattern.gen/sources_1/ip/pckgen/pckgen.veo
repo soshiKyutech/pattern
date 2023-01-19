@@ -70,12 +70,9 @@
 
   pckgen instance_name
    (
-    .clkfb_in(clkfb_in),     // input clkfb_in
     // Clock out ports
     .PCK(PCK),     // output PCK
-    .clkfb_out(clkfb_out),    // output clkfb_out
     // Status and control signals
-    .reset(reset), // input reset
     .locked(locked),       // output locked
    // Clock in ports
     .SYSCLK(SYSCLK));      // input SYSCLK

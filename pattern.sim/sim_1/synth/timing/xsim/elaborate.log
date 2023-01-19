@@ -1,0 +1,21 @@
+Vivado Simulator v2021.2.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot pattern_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.pattern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.GND
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=36.0,...
+Compiling module xil_defaultlib.pckgen_clk_wiz
+Compiling module xil_defaultlib.pckgen
+Compiling module xil_defaultlib.syncgen
+Compiling module xil_defaultlib.pattern
+Compiling module xil_defaultlib.pattern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pattern_tb_time_synth

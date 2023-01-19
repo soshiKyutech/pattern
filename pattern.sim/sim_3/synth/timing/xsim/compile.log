@@ -18,6 +18,3 @@ INFO: [VRFC 10-311] analyzing module syncgen
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_3/new/pattern_tb3.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pattern_tb3
-ERROR: [VRFC 10-2989] 'PCK' is not declared [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_3/new/pattern_tb3.v:42]
-ERROR: [VRFC 10-2989] 'VGA_DE' is not declared [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_3/new/pattern_tb3.v:43]
-ERROR: [VRFC 10-2865] module 'pattern_tb3' ignored due to previous errors [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_3/new/pattern_tb3.v:5]

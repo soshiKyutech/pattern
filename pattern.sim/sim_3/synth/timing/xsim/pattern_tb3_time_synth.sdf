@@ -1,7 +1,7 @@
 (DELAYFILE 
 (SDFVERSION "3.0" )
 (DESIGN "pattern_hdmi")
-(DATE "Fri Jan 13 03:00:28 2023")
+(DATE "Thu Jan 19 12:50:08 2023")
 (VENDOR "XILINX")
 (PROGRAM "Vivado")
 (VERSION "2021.2.1")
@@ -2440,6 +2440,16 @@
     )
 )
 (CELL 
+  (CELLTYPE "BUFG")
+  (INSTANCE pattern/syncgen/pckgen/inst/clkf_buf)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (91.0:101.0:101.0) (91.0:101.0:101.0))
+    )
+  )
+)
+(CELL 
   (CELLTYPE "IBUF")
   (INSTANCE pattern/syncgen/pckgen/inst/clkin1_ibufg)
   (DELAY 
@@ -2450,33 +2460,12 @@
   )
 )
 (CELL 
-  (CELLTYPE "BUFGCTRL")
+  (CELLTYPE "BUFG")
   (INSTANCE pattern/syncgen/pckgen/inst/clkout1_buf)
   (DELAY 
     (PATHPULSE (50.0))
     (ABSOLUTE 
-      (IOPATH I1 O (91.0:101.0:101.0) (91.0:101.0:101.0))
-      (IOPATH I0 O (91.0:101.0:101.0) (91.0:101.0:101.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE0) (posedge I0) (128.0:174.0:174.0) (412.0:412.0:412.0))
-      (SETUPHOLD (negedge CE0) (posedge I0) (128.0:174.0:174.0) (412.0:412.0:412.0))
-      (SETUPHOLD (posedge CE1) (posedge I1) (128.0:174.0:174.0) (412.0:412.0:412.0))
-      (SETUPHOLD (negedge CE1) (posedge I1) (128.0:174.0:174.0) (412.0:412.0:412.0))
-      (SETUPHOLD (posedge S0) (negedge I0) (128.0:174.0:174.0) (412.0:412.0:412.0))
-      (SETUPHOLD (negedge S0) (negedge I0) (128.0:174.0:174.0) (412.0:412.0:412.0))
-      (SETUPHOLD (posedge S1) (negedge I1) (128.0:174.0:174.0) (412.0:412.0:412.0))
-      (SETUPHOLD (negedge S1) (negedge I1) (128.0:174.0:174.0) (412.0:412.0:412.0))
-    )
-)
-(CELL 
-  (CELLTYPE "BUFH")
-  (INSTANCE pattern/syncgen/pckgen/inst/clkout1_buf_en)
-  (DELAY 
-    (PATHPULSE (50.0))
-    (ABSOLUTE 
-      (IOPATH I O (81.0:132.0:132.0) (81.0:132.0:132.0))
+      (IOPATH I O (91.0:101.0:101.0) (91.0:101.0:101.0))
     )
   )
 )
@@ -2497,146 +2486,10 @@
       (SETUPHOLD (negedge PSEN) (posedge PSCLK) (979.0:1040.0:1040.0) (0.0:0.0:0.0))
       (SETUPHOLD (posedge PSINCDEC) (posedge PSCLK) (979.0:1040.0:1040.0) (0.0:0.0:0.0))
       (SETUPHOLD (negedge PSINCDEC) (posedge PSCLK) (979.0:1040.0:1040.0) (0.0:0.0:0.0))
-      (SETUPHOLD (posedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
-      (SETUPHOLD (negedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
       (SETUPHOLD (posedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
       (SETUPHOLD (negedge DI[15:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[0\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[1\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[2\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[3\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[4\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[5\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[6\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-    )
-)
-(CELL 
-  (CELLTYPE "FDRE")
-  (INSTANCE pattern/syncgen/pckgen/inst/seq_reg1_reg\[7\])
-  (DELAY 
-    (ABSOLUTE 
-      (IOPATH C Q (292.0:362.0:362.0) (292.0:362.0:362.0))
-    )
-  )
-    (TIMINGCHECK
-      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-5.0:-5.0:-5.0))
-      (SETUPHOLD (posedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (negedge D) (posedge C) (-74.0:-60.0:-60.0) (262.0:262.0:262.0))
-      (SETUPHOLD (posedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
-      (SETUPHOLD (negedge R) (posedge C) (445.0:552.0:552.0) (-41.0:-41.0:-41.0))
+      (SETUPHOLD (posedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
+      (SETUPHOLD (negedge DADDR[6:0]) (posedge DCLK) (1527.0:1622.0:1622.0) (150.0:150.0:150.0))
     )
 )
 (CELL 
@@ -7077,6 +6930,7 @@
       (INTERCONNECT pattern/syncgen/VGA_VS_i_5/O pattern/syncgen/VGA_VS_i_3/I2 (426.5:449.0:449.0) (426.5:449.0:449.0))
       (INTERCONNECT pattern/syncgen/VGA_VS_reg/Q reg2dvi/U0/DataEncoders\[0\]\.DataEncoder/pC1_1_reg/D (618.3:707.0:707.0) (618.3:707.0:707.0))
       (INTERCONNECT pattern/syncgen/VGA_VS_reg/Q pattern/syncgen/VGA_VS_i_2/I5 (770.7:837.0:837.0) (770.7:837.0:837.0))
+      (INTERCONNECT pattern/syncgen/pckgen/inst/clkf_buf/O pattern/syncgen/pckgen/inst/mmcm_adv_inst/CLKFBIN (439.0:584.0:584.0) (439.0:584.0:584.0))
       (INTERCONNECT pattern/syncgen/pckgen/inst/clkin1_ibufg/O pattern/syncgen/pckgen/inst/mmcm_adv_inst/CLKIN1 (439.0:584.0:584.0) (439.0:584.0:584.0))
       (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf/O reg2dvi/U0/ClockSerializer/SerializerMaster/CLKDIV (759.7:799.7:799.7) (759.7:799.7:799.7))
       (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf/O reg2dvi/U0/ClockSerializer/SerializerSlave/CLKDIV (759.7:799.7:799.7) (759.7:799.7:799.7))
@@ -7153,26 +7007,8 @@
       (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf/O pattern/syncgen/VCNT_reg\[9\]/C (654.7:799.7:799.7) (654.7:799.7:799.7))
       (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf/O pattern/syncgen/VGA_HS_reg/C (654.7:799.7:799.7) (654.7:799.7:799.7))
       (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf/O pattern/syncgen/VGA_VS_reg/C (654.7:799.7:799.7) (654.7:799.7:799.7))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[0\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[1\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[2\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[3\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[4\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[5\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[6\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/clkout1_buf_en/O pattern/syncgen/pckgen/inst/seq_reg1_reg\[7\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
       (INTERCONNECT pattern/syncgen/pckgen/inst/mmcm_adv_inst/CLKFBOUT pattern/syncgen/pckgen/inst/clkf_buf/I (759.7:799.7:799.7) (759.7:799.7:799.7))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/mmcm_adv_inst/CLKOUT0 pattern/syncgen/pckgen/inst/clkout1_buf_en/I (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/mmcm_adv_inst/CLKOUT0 pattern/syncgen/pckgen/inst/clkout1_buf/I0 (439.0:584.0:584.0) (439.0:584.0:584.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/mmcm_adv_inst/LOCKED pattern/syncgen/pckgen/inst/seq_reg1_reg\[0\]/D (909.7:985.7:985.7) (909.7:985.7:985.7))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[0\]/Q pattern/syncgen/pckgen/inst/seq_reg1_reg\[1\]/D (357.4:409.0:409.0) (357.4:409.0:409.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[1\]/Q pattern/syncgen/pckgen/inst/seq_reg1_reg\[2\]/D (357.4:409.0:409.0) (357.4:409.0:409.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[2\]/Q pattern/syncgen/pckgen/inst/seq_reg1_reg\[3\]/D (357.4:409.0:409.0) (357.4:409.0:409.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[3\]/Q pattern/syncgen/pckgen/inst/seq_reg1_reg\[4\]/D (357.4:409.0:409.0) (357.4:409.0:409.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[4\]/Q pattern/syncgen/pckgen/inst/seq_reg1_reg\[5\]/D (357.4:409.0:409.0) (357.4:409.0:409.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[5\]/Q pattern/syncgen/pckgen/inst/seq_reg1_reg\[6\]/D (357.4:409.0:409.0) (357.4:409.0:409.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[6\]/Q pattern/syncgen/pckgen/inst/seq_reg1_reg\[7\]/D (357.4:409.0:409.0) (357.4:409.0:409.0))
-      (INTERCONNECT pattern/syncgen/pckgen/inst/seq_reg1_reg\[7\]/Q pattern/syncgen/pckgen/inst/clkout1_buf/CE0 (900.7:974.7:974.7) (900.7:974.7:974.7))
+      (INTERCONNECT pattern/syncgen/pckgen/inst/mmcm_adv_inst/CLKOUT0 pattern/syncgen/pckgen/inst/clkout1_buf/I (759.7:799.7:799.7) (759.7:799.7:799.7))
       (INTERCONNECT pattern/syncgen/rgb_0__23_carry__0_i_1/O pattern/rgb_0__23_carry__0/DI[1] (607.0:639.0:639.0) (607.0:639.0:639.0))
       (INTERCONNECT pattern/syncgen/rgb_0__23_carry__0_i_2/O pattern/rgb_0__23_carry__0/DI[0] (316.4:333.0:333.0) (316.4:333.0:333.0))
       (INTERCONNECT pattern/syncgen/rgb_0__23_carry__0_i_2/O pattern/syncgen/rgb_0__23_carry__0_i_4/I0 (426.5:449.0:449.0) (426.5:449.0:449.0))

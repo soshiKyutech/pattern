@@ -1,0 +1,57 @@
+Vivado Simulator v2021.2.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot pattern_tb3_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.pattern_tb3 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "pattern_tb3_time_impl.sdf", for root module "pattern_tb3/pattern_hdmi".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "pattern_tb3_time_impl.sdf", for root module "pattern_tb3/pattern_hdmi".
+Time Resolution for simulation is 1fs
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=36.0,...
+Compiling module xil_defaultlib.pckgen_clk_wiz
+Compiling module xil_defaultlib.pckgen
+Compiling module xil_defaultlib.syncgen
+Compiling module xil_defaultlib.pattern
+Compiling module simprims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=25.0,...
+Compiling module simprims_ver.FDPE(XON="FALSE")
+Compiling module xil_defaultlib.SyncAsync_6
+Compiling module xil_defaultlib.ResetBridge_5
+Compiling module simprims_ver.FDRE(XON="FALSE")
+Compiling module xil_defaultlib.SyncAsync__parameterized0
+Compiling module simprims_ver.FDPE_default
+Compiling module xil_defaultlib.ClockGen
+Compiling module simprims_ver.OBUFDS
+Compiling module simprims_ver.OSERDESE2(DATA_RATE_TQ="SDR",DAT...
+Compiling module simprims_ver.OSERDESE2(DATA_RATE_TQ="SDR",DAT...
+Compiling module xil_defaultlib.OutputSERDES
+Compiling module simprims_ver.FDSE_default
+Compiling module xil_defaultlib.TMDS_Encoder
+Compiling module xil_defaultlib.OutputSERDES_0
+Compiling module xil_defaultlib.TMDS_Encoder_1
+Compiling module xil_defaultlib.OutputSERDES_2
+Compiling module xil_defaultlib.TMDS_Encoder_3
+Compiling module xil_defaultlib.OutputSERDES_4
+Compiling module xil_defaultlib.SyncAsync
+Compiling module xil_defaultlib.ResetBridge
+Compiling module xil_defaultlib.rgb2dvi
+Compiling module xil_defaultlib.rgb2dvi_0
+Compiling module xil_defaultlib.pattern_hdmi
+Compiling module xil_defaultlib.pattern_tb3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pattern_tb3_time_impl

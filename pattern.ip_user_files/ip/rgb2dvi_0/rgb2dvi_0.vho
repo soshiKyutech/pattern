@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: digilentinc.com:ip:rgb2dvi:1.2
--- IP Revision: 5
+-- IP Revision: 6
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -63,8 +63,7 @@ COMPONENT rgb2dvi_0
     vid_pVDE : IN STD_LOGIC;
     vid_pHSync : IN STD_LOGIC;
     vid_pVSync : IN STD_LOGIC;
-    PixelClk : IN STD_LOGIC;
-    SerialClk : IN STD_LOGIC
+    PixelClk : IN STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -84,8 +83,7 @@ your_instance_name : rgb2dvi_0
     vid_pVDE => vid_pVDE,
     vid_pHSync => vid_pHSync,
     vid_pVSync => vid_pVSync,
-    PixelClk => PixelClk,
-    SerialClk => SerialClk
+    PixelClk => PixelClk
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

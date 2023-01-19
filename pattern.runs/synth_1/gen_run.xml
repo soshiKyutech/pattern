@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1673528458" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pattern_hdmi.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1674115068" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pattern_hdmi.dcp">
+  <File Type="VDS-TIMING-PB" Name="pattern_hdmi_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pattern_hdmi_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="pattern_hdmi.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="pattern_hdmi_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="pattern_hdmi_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="pattern_hdmi_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="pattern_hdmi.vds"/>
   <File Type="REPORTS-TCL" Name="pattern_hdmi_reports.tcl"/>
   <File Type="PA-TCL" Name="pattern_hdmi.tcl"/>
-  <File Type="RDS-DCP" Name="pattern_hdmi.dcp"/>
-  <File Type="RDS-UTIL" Name="pattern_hdmi_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="pattern_hdmi_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/rgb2dvi_0/rgb2dvi_0.xci">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/ip/rgb2dvi_0/rgb2dvi_0.xci"/>
+        <Attr Name="ImportTime" Val="1674115021"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -44,6 +49,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/pattern_hdmi.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/rgb2dvi_0.xcix">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

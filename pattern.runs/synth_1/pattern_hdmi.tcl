@@ -70,10 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3064935-Strength/incrSyn
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param chipscope.maxJobs 32
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -100,15 +97,14 @@ read_verilog -library xil_defaultlib {
   /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/pattern_hdmi.v
 }
 read_ip -quiet /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0.xci
-set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc]
-set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc]
+set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc]
 
 read_ip -quiet /home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/ip/pckgen/pckgen.xci
 set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_board.xdc]
 set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen.xdc]
 set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_late.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

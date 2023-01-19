@@ -9,12 +9,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rgb2dvi_0 |
 # IP: ip/pckgen/pckgen.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==pckgen || ORIG_REF_NAME==pckgen} -quiet] -quiet
 
-# XDC: /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc
+# XDC: ip/rgb2dvi_0/src/rgb2dvi.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==rgb2dvi_0 || ORIG_REF_NAME==rgb2dvi_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_ooc.xdc
+# XDC: ip/rgb2dvi_0/src/rgb2dvi_ooc.xdc
 
-# XDC: /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc
+# XDC: ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==rgb2dvi_0 || ORIG_REF_NAME==rgb2dvi_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_board.xdc
@@ -24,6 +24,3 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==pckgen || ORIG_REF_NAME==pckgen} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_ooc.xdc
-
-# XDC: /home/soshi/workspace/vivado_tutorial/pattern/pattern.gen/sources_1/ip/pckgen/pckgen_late.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==pckgen || ORIG_REF_NAME==pckgen} -quiet] {/inst } ]/inst ] -quiet] -quiet

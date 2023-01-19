@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2.1 (lin64) Build 3414424 Sun Dec 19 10:57:14 MST 2021
-// Date        : Fri Jan 13 03:00:28 2023
+// Date        : Thu Jan 19 12:50:08 2023
 // Host        : Strength running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               /home/soshi/workspace/vivado_tutorial/pattern/pattern.sim/sim_3/synth/timing/xsim/pattern_tb3_time_synth.v
@@ -2175,59 +2175,43 @@ end
 endmodule
 
 module pckgen
-   (clkfb_in,
-    PCK,
-    clkfb_out,
+   (PCK,
     locked,
     SYSCLK);
-  input clkfb_in;
   output PCK;
-  output clkfb_out;
   output locked;
   input SYSCLK;
 
   wire \<const0> ;
   wire PCK;
   wire SYSCLK;
-  wire clkfb_in;
-  wire NLW_inst_clkfb_out_UNCONNECTED;
   wire NLW_inst_locked_UNCONNECTED;
 
-  assign clkfb_out = \<const0> ;
   assign locked = \<const0> ;
   GND GND
        (.G(\<const0> ));
   pckgen_clk_wiz inst
        (.PCK(PCK),
         .SYSCLK(SYSCLK),
-        .clkfb_in(clkfb_in),
-        .clkfb_out(NLW_inst_clkfb_out_UNCONNECTED),
         .locked(NLW_inst_locked_UNCONNECTED));
 endmodule
 
 module pckgen_clk_wiz
-   (clkfb_in,
-    PCK,
-    clkfb_out,
+   (PCK,
     locked,
     SYSCLK);
-  input clkfb_in;
   output PCK;
-  output clkfb_out;
   output locked;
   input SYSCLK;
 
   wire \<const0> ;
   wire PCK;
   wire PCK_pckgen;
-  wire PCK_pckgen_en_clk;
   wire SYSCLK;
   wire SYSCLK_pckgen;
-  wire clkfb_in;
-  wire mmcm_adv_inst_n_0;
+  wire clkfbout_buf_pckgen;
+  wire clkfbout_pckgen;
   wire mmcm_adv_inst_n_16;
-  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg1;
-  wire NLW_clkf_buf_O_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
@@ -2245,14 +2229,13 @@ module pckgen_clk_wiz
   wire NLW_mmcm_adv_inst_PSDONE_UNCONNECTED;
   wire [15:0]NLW_mmcm_adv_inst_DO_UNCONNECTED;
 
-  assign clkfb_out = \<const0> ;
   assign locked = \<const0> ;
   GND GND
        (.G(\<const0> ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkf_buf
-       (.I(mmcm_adv_inst_n_0),
-        .O(NLW_clkf_buf_O_UNCONNECTED));
+       (.I(clkfbout_pckgen),
+        .O(clkfbout_buf_pckgen));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
@@ -2263,39 +2246,18 @@ module pckgen_clk_wiz
        (.I(SYSCLK),
         .O(SYSCLK_pckgen));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
-  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0 GND:S1,IGNORE0,CE1 VCC:S0,IGNORE1,I1" *) 
-  BUFGCTRL #(
-    .CE_TYPE_CE0("SYNC"),
-    .CE_TYPE_CE1("SYNC"),
-    .INIT_OUT(0),
-    .PRESELECT_I0("TRUE"),
-    .PRESELECT_I1("FALSE"),
-    .SIM_DEVICE("7SERIES"),
-    .STARTUP_SYNC("FALSE")) 
-    clkout1_buf
-       (.CE0(seq_reg1[7]),
-        .CE1(1'b0),
-        .I0(PCK_pckgen),
-        .I1(1'b1),
-        .IGNORE0(1'b0),
-        .IGNORE1(1'b1),
-        .O(PCK),
-        .S0(1'b1),
-        .S1(1'b0));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFH clkout1_buf_en
+  BUFG clkout1_buf
        (.I(PCK_pckgen),
-        .O(PCK_pckgen_en_clk));
+        .O(PCK));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(61.500000),
+    .CLKFBOUT_MULT_F(36.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(8.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(43.625000),
+    .CLKOUT0_DIVIDE_F(35.750000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
@@ -2324,8 +2286,8 @@ module pckgen_clk_wiz
     .CLKOUT6_DUTY_CYCLE(0.500000),
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
-    .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(7),
+    .COMPENSATION("BUF_IN"),
+    .DIVCLK_DIVIDE(5),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
     .IS_PSINCDEC_INVERTED(1'b0),
@@ -2338,8 +2300,8 @@ module pckgen_clk_wiz
     .SS_MOD_PERIOD(10000),
     .STARTUP_WAIT("FALSE")) 
     mmcm_adv_inst
-       (.CLKFBIN(clkfb_in),
-        .CLKFBOUT(mmcm_adv_inst_n_0),
+       (.CLKFBIN(clkfbout_buf_pckgen),
+        .CLKFBOUT(clkfbout_pckgen),
         .CLKFBOUTB(NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED),
         .CLKFBSTOPPED(NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED),
         .CLKIN1(SYSCLK_pckgen),
@@ -2371,102 +2333,6 @@ module pckgen_clk_wiz
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
         .RST(1'b0));
-  initial assign \seq_reg1_reg[0] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[0] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(mmcm_adv_inst_n_16),
-        .Q(seq_reg1[0]),
-        .R(1'b0));
-  initial assign \seq_reg1_reg[1] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[1] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(seq_reg1[0]),
-        .Q(seq_reg1[1]),
-        .R(1'b0));
-  initial assign \seq_reg1_reg[2] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[2] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(seq_reg1[1]),
-        .Q(seq_reg1[2]),
-        .R(1'b0));
-  initial assign \seq_reg1_reg[3] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[3] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(seq_reg1[2]),
-        .Q(seq_reg1[3]),
-        .R(1'b0));
-  initial assign \seq_reg1_reg[4] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[4] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(seq_reg1[3]),
-        .Q(seq_reg1[4]),
-        .R(1'b0));
-  initial assign \seq_reg1_reg[5] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[5] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(seq_reg1[4]),
-        .Q(seq_reg1[5]),
-        .R(1'b0));
-  initial assign \seq_reg1_reg[6] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[6] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(seq_reg1[5]),
-        .Q(seq_reg1[6]),
-        .R(1'b0));
-  initial assign \seq_reg1_reg[7] .notifier = 1'bx;
-(* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .XON("FALSE")) 
-    \seq_reg1_reg[7] 
-       (.C(PCK_pckgen_en_clk),
-        .CE(1'b1),
-        .D(seq_reg1[6]),
-        .Q(seq_reg1[7]),
-        .R(1'b0));
 endmodule
 
 (* kClkPrimitive = "MMCM" *) (* kClkRange = "1" *) (* kGenerateSerialClk = "FALSE" *) 
@@ -2884,8 +2750,6 @@ module syncgen
   wire rgb_12_carry_i_8_n_0;
   wire vid_pHSync;
   wire vid_pVSync;
-  wire NLW_pckgen_clkfb_in_UNCONNECTED;
-  wire NLW_pckgen_clkfb_out_UNCONNECTED;
   wire NLW_pckgen_locked_UNCONNECTED;
   wire [3:1]NLW_rgb_12__123_carry__1_i_1_CO_UNCONNECTED;
   wire [3:0]NLW_rgb_12__123_carry__1_i_1_O_UNCONNECTED;
@@ -3444,8 +3308,6 @@ module syncgen
   pckgen pckgen
        (.PCK(PCK),
         .SYSCLK(CLK),
-        .clkfb_in(NLW_pckgen_clkfb_in_UNCONNECTED),
-        .clkfb_out(NLW_pckgen_clkfb_out_UNCONNECTED),
         .locked(NLW_pckgen_locked_UNCONNECTED));
   LUT5 #(
     .INIT(32'h17880000)) 

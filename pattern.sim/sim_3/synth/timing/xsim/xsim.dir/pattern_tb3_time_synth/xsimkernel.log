@@ -1,0 +1,7 @@
+Running: xsim.dir/pattern_tb3_time_synth/xsimk -simmode gui -wdb pattern_tb3_time_synth.wdb -simrunnum 0 -socket 53027
+Design successfully loaded
+Design Loading Memory Usage: 44516 KB (Peak: 44516 KB)
+Design Loading CPU Usage: 50 ms
+Simulation completed
+Simulation Memory Usage: 130844 KB (Peak: 183784 KB)
+Simulation CPU Usage: 100430 ms

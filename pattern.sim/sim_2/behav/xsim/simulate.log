@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+$stop called at time : 17284960 ns : File "/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_2/new/pattern_tb2.v" Line 40
+INFO: xsimkernel Simulation Memory Usage: 119008 KB (Peak: 171920 KB), Simulation CPU Usage: 89380 ms

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2.1 (lin64) Build 3414424 Sun Dec 19 10:57:14 MST 2021
-| Date         : Thu Jan 12 22:02:08 2023
+| Date         : Thu Jan 19 16:58:58 2023
 | Host         : Strength running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_control_sets -verbose -file pattern_hdmi_control_sets_placed.rpt
 | Design       : pattern_hdmi
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |     8 |
+|    Minimum number of control sets                        |     8 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    29 |
+| Unused register locations in slices containing registers |    37 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
-| >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     1 |
+| Total control sets |     8 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     1 |
+| >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
@@ -58,28 +58,29 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              29 |           10 |
-| No           | No                    | Yes                    |               2 |            1 |
-| No           | Yes                   | No                     |              34 |           13 |
+| No           | No                    | No                     |              23 |            9 |
+| No           | No                    | Yes                    |               8 |            3 |
+| No           | Yes                   | No                     |              34 |           14 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              10 |            6 |
+| Yes          | Yes                   | No                     |              10 |            7 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------------------+-------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
-|                  Clock Signal                  |      Enable Signal      |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------------------------------------+-------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
-|  pattern/syncgen/pckgen/inst/PCK               |                         | RST_IBUF                                                      |                1 |              2 |         2.00 |
-|  pattern/syncgen/pckgen/inst/PCK               |                         | reg2dvi/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1_n_0 |                1 |              4 |         4.00 |
-|  pattern/syncgen/pckgen/inst/PCK_pckgen_en_clk |                         |                                                               |                1 |              8 |         8.00 |
-|  pattern/syncgen/pckgen/inst/PCK               |                         | pattern/syncgen/HCNT[9]_i_1_n_0                               |                5 |             10 |         2.00 |
-|  pattern/syncgen/pckgen/inst/PCK               | pattern/syncgen/hcntend | RST_IBUF                                                      |                6 |             10 |         1.67 |
-|  pattern/syncgen/pckgen/inst/PCK               |                         | reg2dvi/U0/DataEncoders[0].DataEncoder/SR[0]                  |                7 |             20 |         2.86 |
-|  pattern/syncgen/pckgen/inst/PCK               |                         |                                                               |                9 |             21 |         2.33 |
-+------------------------------------------------+-------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
++----------------------------------+-------------------------+-------------------------------------------------------------------------------+------------------+----------------+--------------+
+|           Clock Signal           |      Enable Signal      |                                Set/Reset Signal                               | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------+-------------------------+-------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  pattern/syncgen/pckgen/inst/PCK |                         | reg2dvi/U0/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |         2.00 |
+|  pattern/syncgen/pckgen/inst/PCK |                         | RST_IBUF                                                                      |                1 |              2 |         2.00 |
+|  pattern/syncgen/pckgen/inst/PCK |                         | reg2dvi/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |         4.00 |
+|  pattern/syncgen/pckgen/inst/PCK |                         | reg2dvi/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1_n_0                 |                1 |              4 |         4.00 |
+|  pattern/syncgen/pckgen/inst/PCK |                         | pattern/syncgen/HCNT[9]_i_1_n_0                                               |                5 |             10 |         2.00 |
+|  pattern/syncgen/pckgen/inst/PCK | pattern/syncgen/hcntend | RST_IBUF                                                                      |                7 |             10 |         1.43 |
+|  pattern/syncgen/pckgen/inst/PCK |                         | reg2dvi/U0/DataEncoders[0].DataEncoder/SR[0]                                  |                8 |             20 |         2.50 |
+|  pattern/syncgen/pckgen/inst/PCK |                         |                                                                               |                9 |             23 |         2.56 |
++----------------------------------+-------------------------+-------------------------------------------------------------------------------+------------------+----------------+--------------+
 
 

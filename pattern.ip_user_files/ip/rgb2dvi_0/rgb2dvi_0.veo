@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: digilentinc.com:ip:rgb2dvi:1.2
-// IP Revision: 5
+// IP Revision: 6
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -64,8 +64,7 @@ rgb2dvi_0 your_instance_name (
   .vid_pVDE(vid_pVDE),        // input wire vid_pVDE
   .vid_pHSync(vid_pHSync),    // input wire vid_pHSync
   .vid_pVSync(vid_pVSync),    // input wire vid_pVSync
-  .PixelClk(PixelClk),        // input wire PixelClk
-  .SerialClk(SerialClk)      // input wire SerialClk
+  .PixelClk(PixelClk)        // input wire PixelClk
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

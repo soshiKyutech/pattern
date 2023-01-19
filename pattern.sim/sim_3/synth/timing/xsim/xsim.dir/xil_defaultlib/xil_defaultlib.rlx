@@ -1,0 +1,6 @@
+0.7
+2020.2
+Dec 19 2021
+11:10:04
+/home/soshi/workspace/vivado_tutorial/pattern/pattern.sim/sim_3/synth/timing/xsim/pattern_tb3_time_synth.v,1674100208,verilog,,/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_3/new/pattern_tb3.v,,OutputSERDES;OutputSERDES_0;OutputSERDES_2;OutputSERDES_4;ResetBridge;SyncAsync;TMDS_Encoder;TMDS_Encoder_1;TMDS_Encoder_3;glbl;pattern;pattern_hdmi;pckgen;pckgen_clk_wiz;rgb2dvi;rgb2dvi_0;syncgen,,,../../../../../pattern.gen/sources_1/ip/pckgen;../../../../../pattern.srcs/sources_1/new,,,,,
+/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sim_3/new/pattern_tb3.v,1673555314,verilog,,,,pattern_tb3,,,../../../../../pattern.gen/sources_1/ip/pckgen;../../../../../pattern.srcs/sources_1/new,,,,,

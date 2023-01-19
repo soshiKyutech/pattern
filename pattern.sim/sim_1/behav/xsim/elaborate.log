@@ -4,6 +4,5 @@ Running: /tools/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [/home/soshi/workspace/vivado_tutorial/pattern/pattern.srcs/sources_1/new/syncgen.v:14]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

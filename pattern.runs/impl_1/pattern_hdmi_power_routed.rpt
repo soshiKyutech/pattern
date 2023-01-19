@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2.1 (lin64) Build 3414424 Sun Dec 19 10:57:14 MST 2021
-| Date             : Thu Jan 12 22:02:25 2023
+| Date             : Thu Jan 19 16:59:16 2023
 | Host             : Strength running 64-bit Ubuntu 20.04.4 LTS
 | Command          : report_power -file pattern_hdmi_power_routed.rpt -pb pattern_hdmi_power_summary_routed.pb -rpx pattern_hdmi_power_routed.rpx
 | Design           : pattern_hdmi
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.372        |
+| Total On-Chip Power (W)  | 0.447        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.262        |
-| Device Static (W)        | 0.110        |
+| Dynamic (W)              | 0.336        |
+| Device Static (W)        | 0.111        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.7         |
-| Junction Temperature (C) | 29.3         |
+| Max Ambient (C)          | 79.8         |
+| Junction Temperature (C) | 30.2         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        7 |       --- |             --- |
-| Slice Logic    |    <0.001 |      388 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      185 |     53200 |            0.35 |
+| Clocks         |     0.002 |       15 |       --- |             --- |
+| Slice Logic    |    <0.001 |      393 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      187 |     53200 |            0.35 |
 |   Register     |    <0.001 |       75 |    106400 |            0.07 |
 |   CARRY4       |    <0.001 |       32 |     13300 |            0.24 |
-|   Others       |     0.000 |       33 |       --- |             --- |
-| Signals        |    <0.001 |      236 |       --- |             --- |
-| MMCM           |     0.128 |        1 |         4 |           25.00 |
+|   Others       |     0.000 |       36 |       --- |             --- |
+| Signals        |    <0.001 |      232 |       --- |             --- |
+| MMCM           |     0.200 |        2 |         4 |           50.00 |
 | I/O            |     0.133 |       10 |       125 |            8.00 |
-| Static Power   |     0.110 |          |           |                 |
-| Total          |     0.372 |          |           |                 |
+| Static Power   |     0.111 |          |           |                 |
+| Total          |     0.447 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +72,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.010 |       0.001 |      0.008 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.082 |       0.071 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.012 |       0.003 |      0.009 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.122 |       0.111 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -81,11 +81,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.019 |       0.000 |      0.019 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -132,14 +132,22 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------+----------------------------------------+-----------------+
-| Clock        | Domain                                 | Constraint (ns) |
-+--------------+----------------------------------------+-----------------+
-| CLK          | CLK                                    |             8.0 |
-| PCK_pckgen   | pattern/syncgen/pckgen/inst/PCK_pckgen |            39.7 |
-| PCK_pckgen_1 | pattern/syncgen/pckgen/inst/PCK_pckgen |            39.7 |
-| sys_clk_pin  | CLK                                    |             8.0 |
-+--------------+----------------------------------------+-----------------+
++-------------------+-------------------------------------------------+-----------------+
+| Clock             | Domain                                          | Constraint (ns) |
++-------------------+-------------------------------------------------+-----------------+
+| CLK               | CLK                                             |             8.0 |
+| CLKFBIN           | reg2dvi/U0/ClockGenInternal.ClockGenX/CLKFBIN   |            39.7 |
+| CLKFBIN_1         | reg2dvi/U0/ClockGenInternal.ClockGenX/CLKFBIN   |            39.7 |
+| PCK_pckgen        | pattern/syncgen/pckgen/inst/PCK_pckgen          |            39.7 |
+| PCK_pckgen_1      | pattern/syncgen/pckgen/inst/PCK_pckgen          |            39.7 |
+| PixelClkIO        | reg2dvi/U0/ClockGenInternal.ClockGenX/PixelClk  |            39.7 |
+| PixelClkIO_1      | reg2dvi/U0/ClockGenInternal.ClockGenX/PixelClk  |            39.7 |
+| SerialClkIO       | reg2dvi/U0/ClockGenInternal.ClockGenX/SerialClk |             7.9 |
+| SerialClkIO_1     | reg2dvi/U0/ClockGenInternal.ClockGenX/SerialClk |             7.9 |
+| clkfbout_pckgen   | pattern/syncgen/pckgen/inst/clkfbout_pckgen     |            40.0 |
+| clkfbout_pckgen_1 | pattern/syncgen/pckgen/inst/clkfbout_pckgen     |            40.0 |
+| sys_clk_pin       | CLK                                             |             8.0 |
++-------------------+-------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -151,16 +159,17 @@ Table of Contents
 +--------------------------------------+-----------+
 | Name                                 | Power (W) |
 +--------------------------------------+-----------+
-| pattern_hdmi                         |     0.262 |
-|   pattern                            |     0.128 |
-|     syncgen                          |     0.128 |
-|       pckgen                         |     0.128 |
-|   reg2dvi                            |     0.134 |
-|     U0                               |     0.134 |
+| pattern_hdmi                         |     0.336 |
+|   pattern                            |     0.115 |
+|     syncgen                          |     0.115 |
+|       pckgen                         |     0.115 |
+|   reg2dvi                            |     0.221 |
+|     U0                               |     0.221 |
+|       ClockGenInternal.ClockGenX     |     0.086 |
 |       ClockSerializer                |     0.033 |
 |       DataEncoders[0].DataSerializer |     0.034 |
-|       DataEncoders[1].DataSerializer |     0.033 |
-|       DataEncoders[2].DataSerializer |     0.033 |
+|       DataEncoders[1].DataSerializer |     0.034 |
+|       DataEncoders[2].DataSerializer |     0.034 |
 +--------------------------------------+-----------+
 
 

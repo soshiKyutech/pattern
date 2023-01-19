@@ -10,8 +10,8 @@ module syncgen(
 
 `include "vga_param.vh"
 
-wire clkf;
-pckgen pckgen (.SYSCLK(CLK), .PCK(PCK),.clkfb_in(clkf),.clkfb_out(clkf));
+
+pckgen pckgen (.SYSCLK(CLK), .PCK(PCK));
 
 wire hcntend = (HCNT == HPERIOD - 10'h001);
 

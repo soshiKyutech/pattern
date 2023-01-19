@@ -68,12 +68,9 @@
 module pckgen_clk_wiz 
 
  (// Clock in ports
-  input         clkfb_in,
   // Clock out ports
   output        PCK,
-  output        clkfb_out,
   // Status and control signals
-  input         reset,
   output        locked,
   input         SYSCLK
  );
@@ -108,6 +105,7 @@ wire clk_in2_pckgen;
   wire        psdone_unused;
   wire        locked_int;
   wire        clkfbout_pckgen;
+  wire        clkfbout_buf_pckgen;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1_unused;
@@ -121,7 +119,6 @@ wire clk_in2_pckgen;
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
   wire        clkinstopped_unused;
-  wire        reset_high;
 
   MMCME2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
@@ -154,7 +151,7 @@ wire clk_in2_pckgen;
     .CLKOUT5             (clkout5_unused),
     .CLKOUT6             (clkout6_unused),
      // Input clock control
-    .CLKFBIN             (clkfb_in),
+    .CLKFBIN             (clkfbout_buf_pckgen),
     .CLKIN1              (SYSCLK_pckgen),
     .CLKIN2              (1'b0),
      // Tied to always select the primary input clock
@@ -177,16 +174,17 @@ wire clk_in2_pckgen;
     .CLKINSTOPPED        (clkinstopped_unused),
     .CLKFBSTOPPED        (clkfbstopped_unused),
     .PWRDWN              (1'b0),
-    .RST                 (reset_high));
-  assign reset_high = reset; 
+    .RST                 (1'b0));
 
   assign locked = locked_int;
 // Clock Monitor clock assigning
 //--------------------------------------
  // Output buffering
   //-----------------------------------
-  assign clkfb_out = clkfbout_pckgen;
 
+  BUFG clkf_buf
+   (.O (clkfbout_buf_pckgen),
+    .I (clkfbout_pckgen));
 
 
 
